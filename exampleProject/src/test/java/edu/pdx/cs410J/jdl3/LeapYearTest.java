@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LeapYearTest {
     @Test
-    public void yearIsDivisibleBy400IsLeapYear(){
-        assert(LeapYear.isLeapYear(2000));
+    public void yearIsDivisibleBy400IsLeapYear() {
+        assert (LeapYear.isLeapYear(2000));
     }
 
     @Test
@@ -16,13 +16,15 @@ public class LeapYearTest {
     }
 
     @Test
-    public void yearIsDivisibleBy4ButNot100IsLeapYear(){
-        assert(LeapYear.isLeapYear(2008));
+    public void yearIsDivisibleBy4ButNot100IsLeapYear() {
+        assert (LeapYear.isLeapYear(2008));
     }
+
     @Test
     public void yearNotDivisibleByFour() {
         assertFalse(LeapYear.isLeapYear(2019));
     }
+
     @Test
     public void yearNotDivisibleByFourButIsDivisibleBy100() {
         assertTrue(LeapYear.isLeapYear(2016));
@@ -32,6 +34,7 @@ public class LeapYearTest {
     public void negativeYearThrowsException() {
         LeapYear.isLeapYear(-1000);
     }
+
     @Test(expected = IllegalArgumentException.class)
     public void zeroYearThrowsException() {
         LeapYear.isLeapYear(0);

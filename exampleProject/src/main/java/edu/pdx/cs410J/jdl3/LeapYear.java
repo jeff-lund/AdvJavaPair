@@ -9,7 +9,8 @@ public class LeapYear {
         if (year < 1) {
             throw new IllegalArgumentException("Year must be positive");
         }
-        if(year % 400 == 0){
+
+        if (year % 400 == 0) {
             return true;
         } else if (year % 100 == 0) {
             return false;
